@@ -21,7 +21,7 @@ The main libraries that I've used, are:
  
 • "Favorites" where you can add your favorite Movies and also delete them later on
 
-• Search Bar where you can search Movies
+• Search Bar where you can search for Movies
 
 # Functionalities I'm currently working on and possible Future Implementations: #
 
