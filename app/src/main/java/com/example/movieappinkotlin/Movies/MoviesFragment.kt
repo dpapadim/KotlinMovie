@@ -1,5 +1,6 @@
 package com.example.movieappinkotlin.Movies
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -88,7 +90,7 @@ class MoviesFragment : Fragment() {
             }
 
             if (filteredList.isEmpty()) {
-//                Toast.makeText(this, "No Data found", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, "No Data found", Toast.LENGTH_SHORT).show()
             } else {
                 popularMoviesAdapter.updateMovies(filteredList)
             }
@@ -98,6 +100,11 @@ class MoviesFragment : Fragment() {
     private fun onError() {
         Toast.makeText(activity, getString(R.string.error_fetch_movies), Toast.LENGTH_SHORT).show()
     }
+
+
+
+
+
 }
 
 

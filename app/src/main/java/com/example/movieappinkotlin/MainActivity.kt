@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         bottomNavView = findViewById(R.id.bottom_navigation_view)
         bottomNavView.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-
+                R.id.movies -> showMoviesFragment()
                 R.id.watchlist -> showWatchListFragment()
             }
 
