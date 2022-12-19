@@ -1,4 +1,4 @@
-Main purpose of creating this project is to get more familiar with kotlin and it's functionalities.
+Main purpose of creating this project is to get more familiar with Kotlin and it's functionalities.
 Created by using the FREE Api: https://www.themoviedb.org/ , where you can register and acquire your free Api-key.
 
 # App Specifications: #
