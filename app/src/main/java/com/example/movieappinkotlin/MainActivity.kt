@@ -1,64 +1,64 @@
 package com.example.movieappinkotlin
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.movieappinkotlin.Movies.MoviesFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
+private const val MOVIES_FRAGMENT = "movies_fragment"
+private const val WATCH_LIST_FRAGMENT = "watch_list_fragment"
+
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var popularMovies: RecyclerView
-    private lateinit var popularMoviesAdapter: MoviesAdapter
 
-    private fun showMovieDetails(movie: Movie) {
-
-        val intent = Intent(this, MovieDetailsActivity::class.java)
-        intent.putExtra(MOVIE_BACKDROP, movie.backdropPath)
-        intent.putExtra(MOVIE_POSTER, movie.posterPath)
-        intent.putExtra(MOVIE_TITLE, movie.title)
-        intent.putExtra(MOVIE_RATING, movie.rating)
-        intent.putExtra(MOVIE_RELEASE_DATE, movie.releaseDate)
-        intent.putExtra(MOVIE_OVERVIEW, movie.overview)
-        startActivity(intent)
-
-    }
+    private lateinit var bottomNavView: BottomNavigationView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        bottomNavView = findViewById(R.id.bottom_navigation_view)
+        bottomNavView.setOnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
 
+                R.id.watchlist -> showWatchListFragment()
+            }
 
+            return@setOnNavigationItemSelectedListener true
+        }
 
-        popularMovies = findViewById(R.id.popular_movies)
-        popularMovies.layoutManager = LinearLayoutManager(
-            this,
-            LinearLayoutManager.HORIZONTAL,
-            false
-
-        )
-
-        popularMoviesAdapter = MoviesAdapter(mutableListOf()) { movie -> showMovieDetails(movie) }
-        popularMovies.adapter = popularMoviesAdapter
-
-        MoviesRepository.getPopularMovies(
-            onSuccess = ::onPopularMoviesFetched,
-            onError = ::onError
-        )
+        showMoviesFragment()
 
     }
-
-    private fun onPopularMoviesFetched(movies: List<Movie>) {
-        popularMoviesAdapter.updateMovies(movies)
+    private fun showMoviesFragment() {
+        val transaction = supportFragmentManager.beginTransaction()
+        val fragment = supportFragmentManager.findFragmentByTag(MOVIES_FRAGMENT)
+        val watchListFragment = supportFragmentManager.findFragmentByTag(WATCH_LIST_FRAGMENT)
+        watchListFragment?.let { transaction.hide(it) }
+        if (fragment == null) {
+            transaction.add(R.id.fragment_container, MoviesFragment(), MOVIES_FRAGMENT)
+        } else {
+            transaction.show(fragment)
+        }
+        transaction.commit()
     }
 
-    private fun onError() {
-        Toast.makeText(this, getString(R.string.error_fetch_movies), Toast.LENGTH_SHORT).show()
+    private fun showWatchListFragment() {
+        val transaction = supportFragmentManager.beginTransaction()
+        val fragment = supportFragmentManager.findFragmentByTag(WATCH_LIST_FRAGMENT)
+        val moviesFragment = supportFragmentManager.findFragmentByTag(MOVIES_FRAGMENT)
+
+        moviesFragment?.let { transaction.hide(it) }
+        if (fragment == null) {
+            transaction.add(R.id.fragment_container, WatchListFragment(), WATCH_LIST_FRAGMENT)
+        } else {
+            transaction.show(fragment)
+        }
+        transaction.commit()
     }
-
-
 }
+
+
+

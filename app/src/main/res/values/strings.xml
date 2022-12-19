@@ -7,4 +7,10 @@
     <string name="highest_rated_movies">Highest rated movies of all time</string>
     <string name="upcoming">Upcoming</string>
     <string name="stay_updated">Stay updated with the latest movies</string>
+    <string name="search_word">Type here</string>
+    <string name="search">Search</string>
+    <string name="add_to_watch_list">Add to Watchlist</string>
+    <string name="remove_from_watch_list">Remove from Watchlist</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

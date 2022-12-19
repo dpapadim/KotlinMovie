@@ -11,13 +11,6 @@ fun getPopularMovies(
     @Query("page") page: Int
 ): Call<GetMoviesResponse>
 
-
-    @GET("movie/top_rated")
-    fun getTopRatedMovies(
-        @Query("api_key") apiKey: String = "YOUR_API_KEY_HERE",
-        @Query("page") page: Int
-    ): Call<GetMoviesResponse>
-
 }
 
 

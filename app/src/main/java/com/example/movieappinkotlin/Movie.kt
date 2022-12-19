@@ -3,7 +3,7 @@ package com.example.movieappinkotlin
 import com.google.gson.annotations.SerializedName
 
 
-    data class Movie(
+data class Movie(
 @SerializedName("id") val id: Long,
 @SerializedName("title") val title: String,
 @SerializedName("overview") val overview: String,
