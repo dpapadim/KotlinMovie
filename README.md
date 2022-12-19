@@ -19,11 +19,13 @@ The main libraries that I've used, are:
 
 • Display of "Popular", Movies 
  
-• "Watchlist" where you can add your favorite Movies and also delete them later on
+• "Favorites" where you can add your favorite Movies and also delete them later on
 
 • Search Bar where you can search Movies
 
 # Functionalities I'm currently working on and possible Future Implementations: #
+
+• Expanding my fetched movie list to show more than 20 movies
 
 • Display of "TvShows", not only "Movies"
 
