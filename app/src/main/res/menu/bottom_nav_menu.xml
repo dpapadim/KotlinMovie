@@ -5,7 +5,7 @@
     <item
         android:id="@+id/movies"
         android:enabled="true"
-        android:icon="@drawable/baseline_theaters_black_20"
+        android:icon="@drawable/ic_baseline_movie_24"
         android:title="Movies"
         app:showAsAction="ifRoom" />
 
@@ -14,7 +14,7 @@
     <item
         android:id="@+id/watchlist"
         android:enabled="true"
-        android:icon="@drawable/baseline_favorite_black_20"
+        android:icon="@drawable/ic_favorite_border"
         android:title="Favorites"
         app:showAsAction="ifRoom" />
 </menu>
