@@ -23,7 +23,7 @@ The main libraries that I've used, are:
 
 • Search Bar where you can search for Movies
 
-# Functionalities I'm currently working on and possible Future Implementations: #
+# Functionalities I'm currently working on and possible future Implementations: #
 
 • Expanding my fetched movie list to show more than 20 movies
 
