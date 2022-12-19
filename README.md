@@ -31,7 +31,7 @@ The main libraries that I've used, are:
 
 • Display of few extra sorting categories such as "Top Rated" and "on Air",for both "Movies" & "TvShows"
 
-• Sorting by genre ( Movies/ TvShows) in the "Watchlist" section
+• Sorting by genre ( Movies/ TvShows) in the "Favorites" section
 
 
 
