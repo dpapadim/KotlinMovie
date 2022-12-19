@@ -23,7 +23,7 @@ The main libraries that I've used, are:
 
 • Search Bar where you can search Movies
 
-# Functionalities I'm currently working on and possible Future Implementations #
+# Functionalities I'm currently working on and possible Future Implementations: #
 
 • Display of "TvShows", not only "Movies"
 
