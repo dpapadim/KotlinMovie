@@ -15,7 +15,7 @@ The main libraries that I've used, are:
 
 • Room - an official Android SQLite wrapper library
 
-# Functionalities that are currently being supported by the app, are: #
+# Functionalities that the app currently supports, are: #
 
 • Display of "Popular", Movies 
  
