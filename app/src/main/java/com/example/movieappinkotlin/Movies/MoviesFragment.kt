@@ -84,7 +84,8 @@ class MoviesFragment : Fragment() {
         if (query != null) {
             val filteredList = ArrayList<Movie>()
             for (i in movieList) {
-                if (i.title.lowercase(Locale.ROOT).contains(query)) {
+                if (i.title.lowercase(Locale.ROOT).contains(query.lowercase()) ) {
+
                     filteredList.add(i)
                 }
             }
