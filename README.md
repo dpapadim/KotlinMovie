@@ -27,9 +27,11 @@ The main libraries that I've used, are:
 
 • Expanding my fetched movie list to show more than 20 movies
 
-• Display of "TvShows", not only "Movies"
+• Expanding "Movie Details" to show more info such as "Actors" etc
 
-• Display of few extra sorting categories such as "Top Rated" and "on Air",for both "Movies" & "TvShows"
+• Display of "TvShows" also, not only "Movies"
+
+• Display of few extra sorting categories such as "Trending Now" ,for both "Movies" & "TvShows"
 
 • Sorting by genre ( Movies/ TvShows) in the "Favorites" section
 
