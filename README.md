@@ -5,6 +5,8 @@ Created by using the FREE Api: https://www.themoviedb.org/ , where you can regis
 
 Language: Kotlin
 
+Architecture: None 
+
 The main libraries that I've used, are:
 
 • Retrofit - to handle network related features
@@ -34,6 +36,10 @@ The main libraries that I've used, are:
 • Display of few extra sorting categories such as "Trending Now" ,for both "Movies" & "TvShows"
 
 • Sorting by genre ( Movies/ TvShows) in the "Favorites" section
+
+• Refactor to MVP or MVVM Architecture.
+
+
 
 
 
