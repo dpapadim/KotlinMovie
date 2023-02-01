@@ -37,7 +37,7 @@ The main libraries that I've used, are:
 
 • Sorting by genre ( Movies/ TvShows) in the "Favorites" section
 
-• Refactor to MVP or MVVM Architecture.
+• Refactor to MVP/MVVM Architecture.
 
 
 
